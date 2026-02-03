@@ -1,0 +1,11 @@
+FROM docker.elastic.co/logstash/logstash:9.0.0
+
+USER root
+COPY logstash/pipeline /usr/share/logstash/pipeline
+COPY certs /usr/share/logstash/config/certs
+
+RUN chown -R logstash:logstash /usr/share/logstash \
+ && chmod -R 750 /usr/share/logstash/config/certs \
+ && chmod 644 /usr/share/logstash/pipeline/*.conf
+
+USER logstash

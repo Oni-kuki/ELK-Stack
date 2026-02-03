@@ -1,0 +1,7 @@
+FROM docker.elastic.co/kibana/kibana:9.0.0
+
+USER root
+COPY certs /usr/share/kibana/config/certs
+RUN chown -R kibana:kibana /usr/share/kibana/config/certs \
+ && chmod -R 750 /usr/share/kibana/config/certs
+USER kibana
