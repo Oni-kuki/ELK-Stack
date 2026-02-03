@@ -17,6 +17,10 @@ chmod +x setup-elk.sh
 ```bash
 docker compose up -d
 ```
+### Rebuild images - Update certs
+```bash
+docker compose build
+```
 
 ## Reconstruction without changing the .env    
 ```bash
