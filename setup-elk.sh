@@ -31,7 +31,7 @@ IMAGE="docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}"
 OUT_DIR="$(pwd)/certs"
 TMP_DIR="/tmp/output"
 
-echo "📦 Génération certificats via conteneur temporaire..."
+echo "Certificats generation with temporary Elastic Container..."
 
 CID=$(docker create "$IMAGE" bash -c "
   set -e
