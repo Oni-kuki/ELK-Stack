@@ -18,6 +18,12 @@ chmod +x setup-elk.sh
 docker compose up -d
 ```
 
+## Reconstruction without changing the .env    
+```bash
+chmod +x repush_password.sh
+./repush_password.sh
+```
+
 ## Architecture    
 ```bash
 ├── certs/ # Certificats TLS (CA + instance)
